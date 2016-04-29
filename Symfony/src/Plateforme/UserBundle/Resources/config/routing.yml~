@@ -1,0 +1,15 @@
+registration:
+    path:     /register
+    defaults: { _controller: PlateformeUserBundle:Registration:register }
+
+login:
+    path:     /
+    defaults: { _controller: PlateformeUserBundle:Security:login }
+
+afficherProfil:
+    path:     /afficherProfil
+    defaults: { _controller: PlateformeUserBundle:Security:afficherProfil }
+
+updateProfil:
+    path:     /updateprofil
+    defaults: { _controller: PlateformeUserBundle:Security:updateProfil }

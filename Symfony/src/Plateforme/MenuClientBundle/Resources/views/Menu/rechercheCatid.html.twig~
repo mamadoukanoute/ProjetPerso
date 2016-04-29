@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+{% block body %}
+{# S'il y a une erreur, on l'affiche dans un joli cadre #}
+
+{# Le formulaire, avec URL de soumission vers la route «
+login_check » comme on l'a vu #}
+<h1>Bienvenue sur la plateforme de vente</h1>
+<p>Connectez-vous</body></p>
+<table>
+<form action="{{ path('recherchecategorie') }}" method="post">
+<tr>
+<td>Categories</td>
+<td><select name="catid">
+ {% for categorie in categories %}
+<option value='{{categorie.catid}}'>{{categorie.nom}}</option>
+
+{%endfor%}
+ </select></td></tr>
+ <tr><td> <input type="submit" value="Rechercher" /></td></tr>
+
+</form>
+</table>
+
+
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Prenom :{{ User.prenom }}</p>
+<p>Nom :{{ User.nom }}</p>
+<p>login:{{ User.username }}</p>
+
+<p>Mot de passe :{{ User.password }}</p>
+<p>Nom :{{ User.adresseEmail }}</p>
+<a href="{{ path("updateProfil") }}">Modifier le profil</a><br/>
+<a href="{{ path("logout") }}">Se deconnecter</a>
+</body>
+</html>

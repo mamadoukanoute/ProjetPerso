@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<div class="well">
+<table>
+<tr>
+ <td><strong>NOM </strong></td>
+  <td><strong>QTE</strong></td>
+ <td><strong>PRIX</strong></td>
+ <td><strong>STATU</strong></td>
+ <td><strong>ACTION</strong></td>
+ </tr>
+
+	{% for commande in liste %}
+<tr>
+<td>{{tableau[commande.prodid]}}</td>
+<td>{{commande.qte}}</td>
+<td>{{tableau_prix[commande.prodid]}}</td>
+<td>{{commande.statut}}</td>
+
+<td><a href="accepterCommandes/{{commande.prodid}}">Accepter!</a></td>
+<td><a href="refuserCommandes/{{commande.prodid}}">Refuser!</a></td>
+
+</tr>
+
+ {% endfor %}
+
+
+</table>
+<p><a href="{{ path("logout") }}">Se deconnecter</a></p>
+</div>
+</body>
+</html>

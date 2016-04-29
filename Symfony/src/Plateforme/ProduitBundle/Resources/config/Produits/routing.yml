@@ -1,0 +1,29 @@
+plateforme_produit_homepage:
+    path:     /
+    defaults: { _controller: PlateformeProduitBundle:Default:index }
+
+
+
+afficherProduit:
+    path:     /afficherProduit
+    defaults: { _controller: PlateformeProduitBundle:Produit:afficherProduits }
+
+ajoutProduit:
+    path:     /ajouter.Produit
+    defaults: { _controller: PlateformeProduitBundle:Produit:depot }
+
+modifierProduit:
+    path:     /modifierProduit/{prodid}
+    defaults: { _controller: PlateformeProduitBundle:Produit:updateproduits }
+
+deleteProduit:
+    path:     /deleteProduit/{prodid}
+    defaults: { _controller: PlateformeProduitBundle:Produit:deleteProduit }
+    
+viderProduit:
+    path:     /viderProduit
+    defaults: { _controller: PlateformeProduitBundle:Produit:viderProduit }
+
+ajoutPanier:
+    path:     /ajoutPanier/{prodid}
+    defaults: { _controller: PlateformeProduitBundle:Produit:ajoutPanier }

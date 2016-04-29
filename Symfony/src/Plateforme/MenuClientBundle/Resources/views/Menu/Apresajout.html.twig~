@@ -1,0 +1,8 @@
+Vous venez d'ajouter ce produit au panier:
+
+{{listeproduits.nom}}
+{{listeproduits.prix}}
+
+ <a href="{{ path("afficherPanier") }}">Panier <br/></a>
+ <a href="{{ path("afficherPanier") }}">Continuer mes achats</a></td>
+

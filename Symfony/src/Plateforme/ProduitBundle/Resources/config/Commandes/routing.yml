@@ -1,0 +1,27 @@
+plateforme_produit_homepage:
+    path:     /
+    defaults: { _controller: PlateformeProduitBundle:Default:index }
+
+
+depotCommandes:
+    path:     /depot
+    defaults: { _controller: PlateformeProduitBundle:Commandes:depot }
+
+afficheCommandes:
+    path:     /listeCommandes
+    defaults: { _controller: PlateformeProduitBundle:Commandes:afficher }
+
+accepterCommandes:
+    path:     /accepterCommandes/{prodid}
+    defaults: { _controller: PlateformeProduitBundle:Commandes:accepter }
+
+refuserCommandes:
+    path:     /refuserCommandes/{prodid}
+    defaults: { _controller: PlateformeProduitBundle:Commandes:refuser }
+
+
+
+
+
+
+

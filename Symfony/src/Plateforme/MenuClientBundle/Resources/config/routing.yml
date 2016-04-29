@@ -1,0 +1,38 @@
+accueil_client:
+    path:     /
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:accueil }
+
+profil:
+    path:     /profil
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:accueilProfil }
+
+rechercheaccueil:
+    path:     /recherche
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:rechercheaccueil }
+
+recherchecategorieform:
+    path:     /recherchecategorieform
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:recherchecategorieform }
+
+recherchecategorie:
+    path:     /recherchecategorie
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:recherchecategorie }
+
+
+recherchenom:
+    path:     /recherchenom
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:recherchenom }
+
+recherchenomform:
+    path:     /recherchenomform
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:recherchenomform }
+    
+deconnexion:
+    path:     /deconnexion
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:deconnexion }
+    
+ajoutProduit:
+    path:     /ajouter.Produit
+    defaults: { _controller: PlateformeProduitBundle:Produit:depot }
+
+
