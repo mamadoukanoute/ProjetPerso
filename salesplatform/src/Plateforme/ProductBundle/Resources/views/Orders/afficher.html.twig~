@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<div class="well">
+<table>
+<tr>
+ <tr>
+ <td><strong>NOM </strong></td>
+  <td><strong>QTE</strong></td>
+ <td><strong>PRIX</strong></td>
+ <td><strong>STATUT</strong></td>
+ </tr>
+<!-- <td>QTE</td>-->
+ </tr>
+
+	{% for commande in liste %}
+<tr>
+<td>{{tableau[commande.prodid]}}</td>
+<td>{{commande.qte}}</td>
+<td>{{tableau_prix[commande.prodid]}}</td>
+<td>{{statut[commande.prodid]}}</td>
+
+
+</tr>
+
+ {% endfor %}
+ </table>
+<a href="{{ path("accueil_client") }}">Retour vers l'accueil</a><br/>
+<a href="{{ path("logout") }}">Se deconnecter</a>
+
+</div>
+</body>
+</html>

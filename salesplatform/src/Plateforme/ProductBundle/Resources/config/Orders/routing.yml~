@@ -1,0 +1,27 @@
+plateforme_Product_homepage:
+    path:     /
+    defaults: { _controller: PlateformeProductBundle:Default:index }
+
+
+addOrder:
+    path:     /depot
+    defaults: { _controller: PlateformeProductBundle:Orders:addOrder }
+
+displayOrder:
+    path:     /displayOrder
+    defaults: { _controller: PlateformeProductBundle:Orders:displayOrder }
+
+acceptOrder:
+    path:     /acceptOrder/{prodid}
+    defaults: { _controller: PlateformeProductBundle:Orders:acceptOrder }
+
+refuseOrder:
+    path:     /refuseOrder/{prodid}
+    defaults: { _controller: PlateformeProductBundle:Orders:refuseOrder }
+
+
+
+
+
+
+

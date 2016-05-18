@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="stylesheet" href="{{ asset('bundles/plateformemenuvendeur/css/style.css') }}" type="text/css" media="all" />
+</head>
+<body>
+
+
+<h3>Formulaire d'article</h3>
+<div class="well">
+
+<table>
+<tr>
+   {% for product in listProducts %}
+
+
+<td>
+{%if product.nameFichier=='' %}
+<p>Pas d'image <br/>pour ce product </p>
+{%endif%}
+{%if not product.nameFichier=='' %}
+<a href="{{asset('/uploads/Products_img/'~product.nameFichier|e)}}"><img src="{{ asset('/uploads/Products_img/mini/'~product.nameFichier|e) }}"/></a><br/>
+{%endif%}
+<label>Name :{{product.name}}</label><br/>
+<label>
+Description :
+{{product.description}}
+</label><br/>
+
+<label>
+Amount :{{product.qte}}
+</label><br/>
+
+<label>
+Price :{{product.price}}
+</label><br/>
+<label>
+Type :{{tableau[product.typeid]}}
+</label><br/>
+
+
+
+
+{%if role=='client'%}
+ <a href="addBasket/{{product.prodid}}" class="btn">Add it in your basket</a></td>
+</td>
+{%endif%}
+
+{%if role=='seller'%}
+<label><a href="updateProducts/{{product.prodid}}">Update it!</a></label><br/>
+  <label><a href="deleteProduct/{{product.prodid}}">Delete it!</a></label><br/>
+</td>
+ {%endif%}
+
+ {% endfor %}
+
+ {%if role=='client'%}
+ </tr>
+  <tr><td><a href="{{ path("home_client") }}">Go back into home</a><br/></td></tr>
+   <tr><td><a href="{{ path("logout") }}">Logout</a> </td></tr>
+{%endif%}
+
+{%if role=='seller'%}
+ </tr>
+ {% if not listProducts==null %}
+ <tr><td><a href="{{ path('emptyProduct') }}">Empty the list!</a></td></tr>
+ {%endif%}
+   <tr><td><a href="{{ path("home_seller") }}">Go back into home</a><br/></td></tr>
+ <tr><td><a href="{{ path("logout") }}">Se deconnecter</a> </td></tr>
+ {% endif %}
+
+
+ 
+
+
+</table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>Firstname :{{ User.firstname }}</p>
+<p>Name :{{ User.name }}</p>
+<p>Username:{{ User.username }}</p>
+
+<p>Password :{{ User.password }}</p>
+<p>Email :{{ User.email }}</p>
+
+<a href="{{ path("updateProfil") }}">Update your profile</a><br/>
+{% if role=='seller'%}
+  <tr><td><a href="{{ path("home_seller") }}">Go back into home</a><br/></td></tr>
+{%endif%}
+
+{% if role=='client'%}
+  <tr><td><a href="{{ path("home_client") }}">Go back into home</a><br/></td></tr>
+{%endif%}
+
+
+<a href="{{ path("logout") }}">Se deconnecter</a>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<?php
+
+namespace Plateforme\ProductBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Type
+ *
+ * @ORM\Table(name="Type")
+ * @ORM\Entity(repositoryClass="Plateforme\ProductBundle\Repository\TypeRepository")
+ */
+class Type
+{
+
+	/**
+	 * @var int
+	 *
+	 * @ORM\Column(name="catid", type="integer", unique=true)
+	 * @ORM\Id
+	 */
+	private $catid;
+
+	/**
+	 * @var string
+	 *
+	 * @ORM\Column(name="name", type="string", length=255)
+	 */
+	private $name;
+
+
+
+	/**
+	 * Get catid
+	 *
+	 * @return int
+	 */
+	public function getCatid()
+	{
+		return $this->catid;
+	}
+
+
+	/**
+	 * Set catid
+	 *
+	 * @param string $catid
+	 *
+	 * @return Type
+	 */
+	public function setCatid($catid)
+	{
+		$this->catid = $catid;
+
+		return $this;
+	}
+
+	/**
+	 * Set Name
+	 *
+	 * @param string $name
+	 *
+	 * @return Type
+	 */
+	public function setName($name)
+	{
+		$this->name = $name;
+
+		return $this;
+	}
+
+	/**
+	 * Get name
+	 *
+	 * @return string
+	 */
+	public function getName()
+	{
+		return $this->name;
+	}
+}
+

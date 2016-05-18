@@ -1,0 +1,36 @@
+
+plateforme_produit_panier:
+    resource: "@PlateformeProductBundle/Resources/config/Baskets/routing.yml"
+    prefix:   /basket
+
+plateforme_produit_produits:
+    resource: "@PlateformeProductBundle/Resources/config/Products/routing.yml"
+    prefix:   /products
+
+plateforme_produit_commandes:
+    resource: "@PlateformeProductBundle/Resources/config/Orders/routing.yml"
+    prefix:   /orders
+
+plateforme_menu_vendeur:
+    resource: "@PlateformeMenuSellerBundle/Resources/config/routing.yml"
+    prefix:   /vendeur
+
+plateforme_menu_client:
+    resource: "@PlateformeMenuClientBundle/Resources/config/routing.yml"
+    prefix:   /client
+
+plateforme_user:
+    resource: "@PlateformeUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+login_check:
+    path: /login_check
+
+
+
+logout:
+    path:   /logout

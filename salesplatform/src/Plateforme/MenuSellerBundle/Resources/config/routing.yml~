@@ -1,0 +1,7 @@
+home_seller:
+    path:     /
+    defaults: { _controller: PlateformeMenuSellerBundle:Menu:home }
+
+home_Profile:
+    path:     /profile
+    defaults: { _controller: PlateformeMenuSellerBundle:Profile:home_Profile}

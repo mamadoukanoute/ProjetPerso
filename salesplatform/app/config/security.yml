@@ -1,0 +1,43 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+    encoders:
+        Symfony\Component\Security\Core\User\User: plaintext
+        Plateforme\UserBundle\Entity\User: plaintext
+    
+
+    
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_VENDEUR
+        ROLE_SUPER_ADMIN: [ROLE_CLIENT]
+        
+    providers:
+        
+        my_entity_provider:
+            entity:
+                class:              PlateformeUserBundle:User
+                property:           username
+                
+                
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        default:
+            pattern:   ^/
+            anonymous: true
+            provider: my_entity_provider
+     
+            form_login:
+                login_path: login
+                check_path: login_check
+                success_handler: redirect.after.login
+            logout:
+                path: logout
+                target: /log_out
+
