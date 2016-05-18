@@ -1,4 +1,0 @@
-services:
-#    plateforme_menu_client.example:
-#        class: Plateforme\MenuClientBundle\Example
-#        arguments: ["@service_id", "plain_value", %parameter%]

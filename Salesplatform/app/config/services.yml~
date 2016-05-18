@@ -1,7 +1,0 @@
-services:
-
-  redirect.after.login:
-    class: Plateforme\UserBundle\Redirection\AfterLoginRedirection
-    arguments: ["@router"]
- 
-

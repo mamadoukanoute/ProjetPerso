@@ -1,3 +1,0 @@
-plateforme_menu_vendeur_homepage:
-    path:     /
-    defaults: { _controller: PlateformeMenuVendeurBundle:Default:index }
