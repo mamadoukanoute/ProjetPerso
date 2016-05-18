@@ -1,0 +1,34 @@
+home_client:
+    path:     /
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:home }
+
+profile:
+    path:     /profile
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:home_Profile }
+
+search_home:
+    path:     /search
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:home_search }
+
+searchbyTypeform:
+    path:     /searchbyTypeform
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:searchbyTypeform }
+
+searchbyType:
+    path:     /searchbyType
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:searchbyType }
+
+
+searchbyName:
+    path:     /searchbyName
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:searchbyName }
+
+searchbyNameform:
+    path:     /searchbyNameform
+    defaults: { _controller: PlateformeMenuClientBundle:Menu:searchbyNameform }
+    
+
+    
+
+
+

@@ -1,7 +1,0 @@
-accueil_vendeur:
-    path:     /
-    defaults: { _controller: PlateformeMenuVendeurBundle:Menu:accueil }
-
-profil:
-    path:     /profil
-    defaults: { _controller: PlateformeMenuVendeurBundle:Menu:accueilProfil }

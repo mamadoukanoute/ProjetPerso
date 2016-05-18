@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <link rel="stylesheet" href="{{ asset('bundles/plateformemenuvendeur/css/style.css') }}" type="text/css" media="all" />
+</head>
+<body>
+
+
+<h3>Formulaire d'article</h3>
+<div class="well">
+
+<table>
+<tr>
+   {% for product in listProducts %}
+
+
+<td>
+{%if product.nameFichier=='' %}
+<p>Pas d'image <br/>pour ce product </p>
+{%endif%}
+{%if not product.nameFichier=='' %}
+<a href="{{asset('/uploads/Products_img/'~product.nameFichier|e)}}"><img src="{{ asset('/uploads/Products_img/mini/'~product.nameFichier|e) }}"/></a><br/>
+{%endif%}
+<label>Name :{{product.name}}</label><br/>
+<label>
+Description :
+{{product.description}}
+</label><br/>
+
+<label>
+Amount :{{product.qte}}
+</label><br/>
+
+<label>
+Price :{{product.price}}
+</label><br/>
+<label>
+Type :{{tableau[product.typeid]}}
+</label><br/>
+<label><button type="button"><a href="updateProducts/{{product.prodid}}">Modifier!</a></button></label><br/>
+  <label><button type="button"><a href="deleteProduct/{{product.prodid}}">Supprimer!</a></button></label><br/>
+</td>
+
+
+ {% endfor %}
+ 
+</tr>
+
+ <tr><td><button type="button"><a href="{{ path('emptyProduct') }}">Supprimer tous mes products!</a></button></td></tr>
+ <tr><td><a href="{{ path("logout") }}">Se deconnecter</a> </td></tr>
+
+</table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<div class="well">
+<table>
+<tr>
+ <tr>
+ <td><strong>NOM </strong></td>
+  <td><strong>PRIX</strong></td>
+  <td><strong>QTE</strong></td>
+ <td><strong>STATUT</strong></td>
+  <td><strong>ACTION</strong></td>
+ </tr>
+<!-- <td>QTE</td>-->
+ </tr>
+
+	{% for order in list %}
+<tr>
+<td>{{tableau[order.prodid]}}</td>
+<td>{{array_price[order.prodid]}}</td>
+{% if role=='client'%}
+<td>{{array_amount[order.prodid]}}</td>
+<td>{{status[order.prodid]}}</td>
+
+{%endif%}
+
+{% if role=='seller'%}
+<td>{{order.qte}}</td>
+<td>{{order.status}}</td>
+<td><a href="acceptOrder/{{order.prodid}}">Accept!</a></td>
+<td><a href="refuseOrder/{{order.prodid}}">Refuse!</a></td>
+{%endif%}
+ {% endfor %}
+ </tr>
+ </table>
+ {% if role=='seller'%}
+
+<a href="{{ path("home_seller") }}">Go back into home</a><br/>
+{%endif%}
+ {% if role=='client'%}
+
+<a href="{{ path("home_client") }}">Go back into home</a><br/>
+{%endif%}
+<a href="{{ path("logout") }}">Logout</a>
+
+</div>
+</body>
+</html>

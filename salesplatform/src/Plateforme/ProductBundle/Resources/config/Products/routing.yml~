@@ -1,0 +1,29 @@
+plateforme_Product_homepage:
+    path:     /
+    defaults: { _controller: PlateformeProductBundle:Default:index }
+
+
+
+displayProduct:
+    path:     /displayProduct
+    defaults: { _controller: PlateformeProductBundle:Product:displayProducts }
+
+addProduct:
+    path:     /addProduct
+    defaults: { _controller: PlateformeProductBundle:Product:addProduct }
+
+updateProduct:
+    path:     /updateProducts/{prodid}
+    defaults: { _controller: PlateformeProductBundle:Product:updateProducts }
+
+deleteProduct:
+    path:     /deleteProduct/{prodid}
+    defaults: { _controller: PlateformeProductBundle:Product:deleteProduct }
+    
+emptyProduct:
+    path:     /emptyProduct
+    defaults: { _controller: PlateformeProductBundle:Product:emptyProduct }
+
+addBasket:
+    path:     /addBasket/{prodid}
+    defaults: { _controller: PlateformeProductBundle:Product:addBasket }

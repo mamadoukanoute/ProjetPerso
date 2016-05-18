@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+{% block body %}
+{# S'il y a une erreur, on l'affiche dans un joli cadre #}
+
+{# Le formulaire, avec URL de soumission vers la route «
+login_check » comme on l'a vu #}
+
+<form action="searchbyName" method="post">
+<table>
+<tr>
+<td>Nom</td>
+<td><input type="search"  name="nom" /></td>
+</tr>
+
+<tr><td><input type="submit" value="RECHERCHER" /></td></tr>
+</form>
+</table>
+<a href="{{ path("logout") }}">Se deconnecter</a>
+
+
+{% endblock %}
+</body>
+</html>

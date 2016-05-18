@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+{% block body %}
+{# S'il y a une erreur, on l'affiche dans un joli cadre #}
+{# Le formulaire, avec URL de soumission vers la route «
+login_check » comme on l'a vu #}
+
+
+
+<a href="{{ path("addProduct") }}">Add one or many product(s)<br/></a>
+<a href="{{ path("displayProduct") }}">Show the products</a><br/>
+<a href="{{ path("displayOrder") }}">Orders placed</a><br/>
+<a href="{{ path("home_Profile") }}">Profile</a><br/>
+<a href="{{ path("search_homeseller") }}">Search</a><br/>
+<a href="{{ path("logout") }}">Logout</a>
+{% endblock %}
+</audio>
+</body>
+</html>

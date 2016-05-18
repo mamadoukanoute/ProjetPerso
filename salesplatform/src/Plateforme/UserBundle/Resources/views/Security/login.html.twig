@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<div id='well'>
+{% block body %}
+
+{% if error %}
+<div class="alert alert-error">{{ error.message }}</div>
+{% endif %}
+
+<h1>Welcome to the sales platform</h1>
+<p>Connection</p>
+<table>
+<form action="{{ path('login_check') }}" method="post">
+<tr>
+<td><label for="username">Login :</label></td>
+<td><input type="text" id="username" name="_username" value="{{
+last_username }}" /></td>
+</tr>
+
+<tr>
+<td><label for="password">Password :</label></td>
+<td><input type="password" id="password" name="_password" /></td>
+</tr>
+
+<tr>
+<td><label for="remember_me"> Keep the open session:</label></td>
+<td><input type="checkbox" id="remember_me" name="_remember_me" checked /></td>
+</tr>
+<tr><td><input type="submit" value="Se connecter" /></td></tr>
+ <tr><td><a href="{{ path('registration') }}" class="btn">Register</a></td>
+</tr>
+</form>
+</table>
+
+{% endblock %}
+</div>
+</body>
+</html>
