@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+{% block body %}
+{# S'il y a une erreur, on l'affiche dans un joli cadre #}
+<h2>Recherche par email, une seule lettre dans l'adresse email et l'adresse ça s'affiche</h2>
+{# Le formulaire, avec URL de soumission vers la route «
+login_check » comme on l'a vu #}
+
+<form action="search" method="post">
+<table>
+<tr>
+<td>Nom</td>
+<td><input type="search"  name="search" /></td>
+</tr>
+
+<tr><td><input type="submit" value="RECHERCHER" /></td></tr>
+</form>
+</table>
+
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,16 @@
+home:
+    path:     /
+    defaults: { _controller: AppBundle:Menu:home }
+
+afterlogin:
+    path:     /afterlogin
+    defaults: { _controller: AppBundle:Menu:afterlogin}
+
+search:
+    path:     /search
+    defaults: { _controller: AppBundle:Menu:search }
+
+searchform:
+    path:     /searchform
+    defaults: { _controller: AppBundle:Menu:searchform }
+

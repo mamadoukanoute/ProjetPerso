@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{{ asset('bundles/framework/css/style.css') }}" type="text/css"media="all" />
+</head>
+<body>
+
+
+<h3>Liste </h3>
+<div class="well">
+
+<table>
+{% for carnet in listCarnet %}
+<tr>
+
+<td>{{carnet.email}}</td>
+<td><a href="showInfoMembre/{{carnet.id}}">Détail!</a></td>
+<td><a href="updateCarnet/{{carnet.id}}"><img src="{{ asset('bundles/framework/images/edit.png') }}"/></a></td>
+<td><a href="deleteCarnet/{{carnet.id}}">✘</a></td>
+</tr>
+
+
+{%endfor%}
+
+</table>
+</div>
+<div class="retour"><a href="{{ path('afterlogin') }}">Go back into home</a></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+<h3>Info sur l'élément </h3>
+<div class="well">
+
+<table>
+{% for element in membre %}
+<tr>
+<td>Email :</td>
+<td>{{element.email}}</td>
+</tr>
+<tr>
+<td>Adresse :</td>
+<td>{{element.adresse}}</td>
+</tr>
+<tr>
+<td>Téléphone :</td>
+<td>{{element.telephone}}</td>
+</tr>
+<tr>
+<td>Site web :</td>
+<td>{{element.siteweb}}</td>
+</tr>
+<tr>
+{%set update=url~'/updateCarnet'%}
+{%set delete=url~'/deleteCarnet'%}
+<td><a href="{{update}}/{{element.id}}"><img src="{{ asset('bundles/framework/images/edit.png') }}"/></a></td></tr>
+<tr><td><a href="{{delete}}/{{element.id}}">✘</a></td></tr>
+{%endfor%}
+</table>
+</div>
+<div class="retour"><a href="{{ path('afterlogin') }}">Go back into home</a></div>
+
+</body>
+</html>

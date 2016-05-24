@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+     
+</head>
+<body>
+
+<div class="well">
+
+<table>
+<tr>
+<td>Exportation réussie</td>
+</tr>
+   {% set foo=userid~".txt" %}
+<tr>
+<td><a href="{{asset('/uploads/Carnets/'~foo)}}" download="moncarnet">Télécharger le carnet au format txt
+</a></td></tr>
+<tr><td><a href="{{ path('afterlogin') }}">Go back into home</a><br/></td></tr>
+
+</a></td>
+</tr>
+
+
+
+
+</table>
+</div>
+
+</body>
+</html>

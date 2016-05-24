@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<table>
+<tr>
+<td>Username:</td>
+<td>{{ User.username }}</td>
+</tr>
+<tr>
+<td>Email :</td>
+<td>{{ User.email }}</td>
+</tr>
+<tr>
+<td>Mot de passe :</td>
+<td>{{ User.password }}</td>
+</tr>
+
+
+<tr>
+<td>Confirm your password :</td>
+<td><input type="password" id="password2" name="password2" /></td>
+</tr>
+
+<tr>
+<td><a href="{{ path("updateProfil") }}">Modifier le profil</a></td>
+</tr>
+<tr>
+<td><a href="{{ path("logout") }}">Se deconnecter</a></td>
+</tr>
+</table>
+</body>
+</html>

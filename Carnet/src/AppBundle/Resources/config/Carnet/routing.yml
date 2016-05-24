@@ -1,0 +1,31 @@
+addCarnet:
+    path:     /add
+    defaults: { _controller: AppBundle:Carnet:add}
+
+showCarnet:
+    path:     /show
+    defaults: { _controller: AppBundle:Carnet:show}
+
+showInfoMembre:
+    path:     /showInfoMembre/{id}
+    defaults: { _controller: AppBundle:Carnet:showInfoMembre}
+
+updateCarnet:
+    path:     /updateCarnet/{id}
+    defaults: { _controller: AppBundle:Carnet:update}
+
+deleteCarnet:
+    path:     /deleteCarnet/{id}
+    defaults: { _controller: AppBundle:Carnet:delete}
+
+pdfCarnet:
+    path:     /pdfCarnet
+    defaults: { _controller: AppBundle:Carnet:pdf}
+
+importerCarnet:
+    path:     /importerCarnet
+    defaults: { _controller: AppBundle:Carnet:importer}
+
+exporterCarnet:
+    path:     /exporterCarnet
+    defaults: { _controller: AppBundle:Carnet:exporter}
