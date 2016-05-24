@@ -29,7 +29,7 @@
 <tr>
 {%set update=url~'/updateCarnet'%}
 {%set delete=url~'/deleteCarnet'%}
-<td><a href="{{update}}/{{element.id}}"><img src="{{ asset('bundles/framework/images/edit.png') }}"/></a></td></tr>
+<td><a href="{{update}}/{{element.id}}">Modifiez</a></td></tr>
 <tr><td><a href="{{delete}}/{{element.id}}">✘</a></td></tr>
 {%endfor%}
 </table>
