@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carnets><carnet><id>61</id><civilite>ddd</civilite><prenom>1</prenom><nom>2</nom><datenaissance>2016-06-15</datenaissance><cree>2016-06-08 00:00:00</cree><mis_a_jour>2016-06-11 00:00:00</mis_a_jour><adresse><rue>2</rue><codepostal>2</codepostal><ville>2&#13;
+</ville><cree>0000-00-00 00:00:00</cree><mis_a_jour>0000-00-00 00:00:00</mis_a_jour></adresse></carnet><carnet><id>62</id><civilite>ddd</civilite><prenom>mlk</prenom><nom>km,</nom><datenaissance>0000-00-00</datenaissance><cree>0000-00-00 00:00:00</cree><mis_a_jour>0000-00-00 00:00:00</mis_a_jour><adresse/></carnet></carnets>
