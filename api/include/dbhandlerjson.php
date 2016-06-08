@@ -110,7 +110,7 @@ if (mysqli_num_rows($result) > 0) {
     {
 
       $info=$_POST['info'];
-      $adresse=$_POST['adresse'];
+     // $adresse=$_POST['adresse'];
           //{"civilite":1,"prenom":2,"nom":3,"adresse":3}
       //{"civilite":1,"prenom":2,"nom":3,"adresse":{ "rue":1,"code":1234,"ville":test}}
 

@@ -98,8 +98,13 @@ if($_SESSION['token']==$_GET["token"]){
      	include("formcarnet.php");
 }
      if(isset($_POST['modifier'])) {
-
-     		$dbhandler->api_putCarnet($_GET["value"],2);
+$resulat=$dbhandler->api_getcarnetdetail($_GET["value"]);
+      $t=json_decode($resulat,true);//echo $t[0]['datenaissance'];
+     
+      $resultat2=$dbhandler->api_getcarnetdetail2($t[0]['nom']);
+        $t2=json_decode($resultat2,true);
+        $taille= count($t2)."<br/>";
+     		$dbhandler->api_putCarnet($_GET["value"],$taille);
    }
    
  }else echo"bad token";
