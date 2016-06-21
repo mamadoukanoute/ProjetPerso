@@ -9,7 +9,7 @@ use Symfony\Component\HttpFoundation\Session\Session;
 
 use Plateforme\UserBundle\Entity\User;
 use Plateforme\UserBundle\Form\UserbisType;
-use Plateforme\ProduitBundle\Entity\Categories;
+use Plateforme\ProductBundle\Entity\Type;
 
 class SecurityController extends Controller
 {
@@ -20,20 +20,7 @@ class SecurityController extends Controller
 
 
 		// Si le visiteur est déjà identifié, on le redirige vers
-		if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_REMEMBERED') && $this->get('security.authorization_checker')->isGranted('ROLE_CLIENT')) {
-
-			return new response("Vous etes un client");
-		}
-		if ($this->get('security.authorization_checker')->isGranted('IS_AUTHENTICATED_REMEMBERED') && $this->get('security.authorization_checker')->isGranted('ROLE_SELLER')) {
-
-			//return new response("Vous etes un vendeur");
-		}
-
-
-		else
-		{
-
-			$session = $request->getSession();
+		$session = $request->getSession();
 			// On vérifie s'il y a des erreurs d'une précédente soumission
 			if ($request->attributes->has(Security::AUTHENTICATION_ERROR)) {
 				$error = $request->attributes->get(Security::AUTHENTICATION_ERROR);
@@ -41,18 +28,17 @@ class SecurityController extends Controller
 				$error = $session->get(Security::AUTHENTICATION_ERROR);
 				$session->remove(Security::AUTHENTICATION_ERROR);
 			}
-			//$this->initialize();
+			$this->initialize();
 			//return new response("Connexion réussie ");
 			return $this->render('PlateformeUserBundle:Security:login.html.twig',array('last_username' => $session->get(Security::LAST_USERNAME),'error'=> $error,));
 		}
-	}
 
 
-	/*public function initialize(){
+	public function initialize(){
 
 		$repository = $this->getDoctrine()
 				->getManager();
-				$repository2=    $repository->getRepository('PlateformeProduitBundle:Categories');
+				$repository2=    $repository->getRepository('PlateformeProductBundle:Type');
 
 				$categories = $repository2->findAll();  
 				if($categories==null) {
@@ -64,9 +50,9 @@ class SecurityController extends Controller
 
 					$taille=count($tableau);
 					for($i=1;$i<=$taille;$i++){
-						$element=new Categories();
-						$element->setCatid($i);
-						$element->setNom(array_shift($tableau));
+						$element=new Type();
+						$element->setTypeid($i);
+						$element->setName(array_shift($tableau));
 
 						$repository->persist($element);
 
@@ -76,7 +62,7 @@ class SecurityController extends Controller
 
 				}
 
-	}*/
+	}
 
 
 

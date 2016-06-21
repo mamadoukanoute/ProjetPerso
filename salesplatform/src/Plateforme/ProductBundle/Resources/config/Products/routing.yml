@@ -1,6 +1,6 @@
 displayProduct:
     path:     /displayProduct
-    defaults: { _controller: PlateformeProductBundle:Product:displayProducts }
+    defaults: { _controller: PlateformeProductBundle:Product:displayproducts }
 
 addProduct:
     path:     /addProduct

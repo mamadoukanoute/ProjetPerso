@@ -38,7 +38,7 @@ $user->setRoles(array($user->type));
 $em->persist($user);
 $em->flush();
 // On redirige vers la page de visualisation de l'article
-return new response ("You are registered");
+return $this->render('PlateformeUserBundle:Register:after.html.twig');
 //}
 
 }

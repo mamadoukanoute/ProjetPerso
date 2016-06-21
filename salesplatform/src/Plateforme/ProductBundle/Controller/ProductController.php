@@ -50,7 +50,7 @@ class ProductController extends Controller
 				//}
 
 			}
-			return new response ("The product is added");
+				return $this->redirectToRoute('displayProduct');
 		}
 		else return $this->render('PlateformeProductBundle:Products:add.html.twig',array('form' => $form->createView(),));
 		//return new response("problème");
@@ -160,7 +160,7 @@ $em->refresh($basket);*/
 
 						$repository ->flush();
 						// On redirige vers la page de visualisation de l'article
-						return new response ("The update was successful");
+				return $this->redirectToRoute('displayProduct');
 					}
 				}
 

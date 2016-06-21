@@ -131,7 +131,7 @@ class BasketController extends Controller
 
 		$repository = $this->getDoctrine()
 				->getManager();
-				$repository2=    $repository ->getRepository('PlateformeProductBundle:basket');
+				$repository2=    $repository ->getRepository('PlateformeProductBundle:Basket');
 
 				$listBasket = $repository2->findByUserid($userid);
 
@@ -140,7 +140,7 @@ class BasketController extends Controller
 				}
 				$repository ->flush();
 				// On redirige vers la page de visualisation de l'article
-				return $this->redirectToRoute('afficherbasket');
+				return $this->redirectToRoute('displayBasket');
 	}
 
 
