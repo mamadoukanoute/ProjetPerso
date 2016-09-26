@@ -1,0 +1,7 @@
+Rest_User : 
+  type : rest
+  resource: "@ApiUserBundle/Resources/config/routing.yml"
+
+Rest_Product : 
+  type : rest
+  resource: "@ApiProductBundle/Resources/config/routing.yml"

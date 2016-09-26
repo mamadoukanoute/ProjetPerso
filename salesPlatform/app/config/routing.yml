@@ -1,0 +1,12 @@
+
+
+ #REST 
+users:
+    type:     rest
+    resource: "@ApiUserBundle/Controller"
+    prefix: api
+
+products:
+    type:     rest
+    resource: "@ApiProductBundle/Controller"
+    prefix: api

@@ -1,0 +1,35 @@
+[class^="fontello-"], [class*=" fontello-"] {
+  font-family: 'fontello';
+  font-style: normal;
+  font-weight: normal;
+ 
+  /* fix buttons height */
+  line-height: 1em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+}
+ 
+.fontello-play { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x25b6;&nbsp;'); }
+.fontello-heart-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.fontello-note-beamed { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x266b;&nbsp;'); }
+.fontello-play-circled2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe05b;&nbsp;'); }
+.fontello-user-add { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe700;&nbsp;'); }
+.fontello-eye { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe70a;&nbsp;'); }
+.fontello-comment { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe718;&nbsp;'); }
+.fontello-comment-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe804;&nbsp;'); }
+.fontello-comment-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe805;&nbsp;'); }
+.fontello-location { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe724;&nbsp;'); }
+.fontello-spin1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe830;&nbsp;'); }
+.fontello-spin2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe831;&nbsp;'); }
+.fontello-spin5 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe838;&nbsp;'); }
+.fontello-picture { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f304;&nbsp;'); }
+.fontello-video { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f3ac;&nbsp;'); }
+.fontello-thumbs-up-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
+.fontello-thumbs-up { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f44d;&nbsp;'); }
+.fontello-thumbs-down-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
+.fontello-thumbs-down { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f44e;&nbsp;'); }
+.fontello-attach-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.fontello-attach { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f4ce;&nbsp;'); }
+.fontello-link { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f517;&nbsp;'); }
+.fontello-clock { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f554;&nbsp;'); }

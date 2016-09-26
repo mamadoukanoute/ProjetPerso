@@ -1,0 +1,37 @@
+'use strict'
+angular.module('clientApp').controller('usersNewCtrl', [
+	'$scope',
+	'constants',
+	'User',
+	'$stateParams',
+	'user',
+	function(
+		$scope,
+		constants,
+		User,
+		$stateParams,
+		user
+		){
+		var method = 'save';
+		if($stateParams.id===null){
+			$scope.user = {}
+		}else{
+			method = 'update';
+            $scope.user = user;
+		}
+		$scope.Insert = function (){
+			User[method]($scope.user, function(success){
+                console.log(success);
+                // $state.go("profile.campaigns.list", {}, {reload: true});
+            },function(error){
+				console.log(error);
+			});
+		}
+		// $scope.users = users;
+
+
+
+
+
+	}
+]);

@@ -1,0 +1,21 @@
+.main{
+	margin-left: 1000px;
+	margin-right: 1000px;	
+}
+
+
+.member {
+  position: relative;
+top: 20px; 
+left:-150px;
+}
+.member .description {
+  position: relative;
+top: 20px; 
+left:-90px;
+}
+.member .price {
+  position: relative;
+top: 20px; 
+
+}

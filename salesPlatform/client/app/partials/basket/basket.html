@@ -1,0 +1,14 @@
+<div>
+	<div ng-if = "!baskets.length">
+		<p>Vous n'avez pas de panier dans la base de donnée</p>
+	</div>
+	<div ng-if = "baskets.length">
+		<li ng-repeat = "basket in baskets">
+			{{basket.name}}<br/>
+			<label>Quantité</label>
+		        <select ng-model="basket.qte" ng-options="element for element in tab" >
+		    </select><br/>
+		</li>
+		<a href ="" ng-click = "addToOrder()">Passer la commande</a>
+	</div>
+</div>

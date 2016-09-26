@@ -1,0 +1,17 @@
+<div>
+	<h2>Bienvenue à votre espace {{current_user.roles[0]}} {{current_user.username}} </h2>
+	<a href = "" ng-click = "logout()" >Déconnexion</a>
+	<div>
+		<div ng-if = "current_user.roles[0] === 'client'">
+			<a ui-sref = "profile.product.list" >Lister les produits</a><br/>
+			<a ui-sref = "profile.basket" >Mon Panier</a><br/>
+			<a ui-sref = "profile.order" >Mes commandes</a>
+		</div>
+		<div ng-if = "current_user.roles[0] === 'vendeur'">
+			<a ui-sref = "profile.product.new" >Créer un produit</a><br/>
+			<a ui-sref = "profile.product.list" >Mes produits</a><br/>
+			<a ui-sref = "profile.order" >Mes commandes</a>
+		</div>
+	</div>
+	<ui-view></ui-view>
+</div>

@@ -1,0 +1,27 @@
+<section>
+    <header>
+        <h2>{{product.name}}</h2>
+    </header>
+    <div class="" >
+        <div class="">
+	        <div class="">
+		        <div class="avatar">
+					<img ng-src = "http://localhost:8000/uploads/{{product.name_file}}">
+				</div>
+				<div class="">
+					<a ui-shref = "profile.product.info"><strong class = "name">{{product.nom}}</strong></a><br/>
+					<em class = "role">{{product.price}}€</em>
+					<ul class="sm">
+                    </ul>
+				</div>
+			</div>
+		</div>
+	</div>
+			<label>Qte</label>
+        <select ng-model="qte" ng-options="key as value for (key , value) in tab" >
+        </select><br/>
+		<a href = "" ng-click = "addBasket()">Ajouter au panier</a>
+		<h4>Descriptif : {{product.name}}</h4>
+		<p>{{product.description}}</p>
+
+	</section>

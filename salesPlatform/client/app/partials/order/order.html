@@ -1,0 +1,48 @@
+
+<div>
+	<div ng-if = "orders.length">
+		<table style="width:50%; border-collapse: collapse;">
+		    <thead>
+		        <th>
+		            Name
+		        </th>
+		        <th>
+		            Qte
+		       	</th>
+		        <th>
+		            Status
+		       	</th>
+		       	<th ng-if = "current_user.roles[0] === 'vendeur' ">
+		            Action
+		       	</th>
+			</thead>
+		    <tbody>
+		     	<tr ng-repeat="order in orders">
+		            <td>
+		                <span>{{order.name}}</span>
+		            </td>
+		            <td>
+						<span>{{order.qte}}</span>
+		            </td>
+		           	<td>
+						<span>
+							<strong ng-if = "order.status !== 'pending'">{{order.status}}</strong>
+							<span ng-if = "order.status === 'pending'">{{order.status}}</span>
+						</span>
+
+		            </td>
+		           	<td ng-if = "order.status === 'pending' && current_user.roles[0] === 'vendeur'">
+						<a href = "" ng-click = "acceptOrder(order)">Accepter</a>
+						<a href = "" ng-click = "refuseOrder(order)">Refuser</a>
+		            </td>
+		           	<td ng-if = "order.status !== 'pending' && current_user.roles[0] === 'vendeur'">
+						<span>Pas d'action possible</span>
+					</td>	            
+		        </tr>
+		    </tbody>
+		</table>
+	</div>
+	<div ng-if = "!orders.length">
+		Vous n'avez pas de commandes passées
+	</div>
+</div>

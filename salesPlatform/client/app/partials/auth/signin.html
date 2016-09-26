@@ -1,0 +1,14 @@
+<div>
+	<form>
+		<label>Username</label>
+		<input type = "text" ng-model = "user.username"><br/>
+		<label>Email</label>
+		<input type = "text" ng-model = "user.email"><br/>
+		<label>Password</label>
+		<input type = "password" ng-model = "user.password"><br/>
+		<label>Categorie</label>
+	        <select ng-model="user.type" ng-options="key as value for (key , value) in tab" >
+	        </select><br/>
+		<input type = "submit" ng-click = "saveUser()">
+	</form>
+</div>

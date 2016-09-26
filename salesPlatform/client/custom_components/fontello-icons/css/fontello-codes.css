@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+ 
+.fontello-play:before { content: '\25b6'; } /* '▶' */
+.fontello-heart-1:before { content: '\e801'; } /* '' */
+.fontello-note-beamed:before { content: '\266b'; } /* '♫' */
+.fontello-play-circled2:before { content: '\e05b'; } /* '' */
+.fontello-user-add:before { content: '\e700'; } /* '' */
+.fontello-eye:before { content: '\e70a'; } /* '' */
+.fontello-comment:before { content: '\e718'; } /* '' */
+.fontello-comment-1:before { content: '\e804'; } /* '' */
+.fontello-comment-2:before { content: '\e805'; } /* '' */
+.fontello-location:before { content: '\e724'; } /* '' */
+.fontello-spin1:before { content: '\e830'; } /* '' */
+.fontello-spin2:before { content: '\e831'; } /* '' */
+.fontello-spin5:before { content: '\e838'; } /* '' */
+.fontello-picture:before { content: '🌄'; } /* '\1f304' */
+.fontello-video:before { content: '🎬'; } /* '\1f3ac' */
+.fontello-thumbs-up-1:before { content: '\e802'; } /* '' */
+.fontello-thumbs-up:before { content: '👍'; } /* '\1f44d' */
+.fontello-thumbs-down-1:before { content: '\e803'; } /* '' */
+.fontello-thumbs-down:before { content: '👎'; } /* '\1f44e' */
+.fontello-attach-1:before { content: '\e800'; } /* '' */
+.fontello-attach:before { content: '📎'; } /* '\1f4ce' */
+.fontello-link:before { content: '🔗'; } /* '\1f517' */
+.fontello-clock:before { content: '🕔'; } /* '\1f554' */

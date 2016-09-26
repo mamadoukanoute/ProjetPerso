@@ -1,0 +1,91 @@
+@font-face {
+	font-family: 'px-icon';
+	src:url('fonts/px-icon.eot?ormo7k');
+	src:url('fonts/px-icon.eot?#iefixormo7k') format('embedded-opentype'),
+		url('fonts/px-icon.woff?ormo7k') format('woff'),
+		url('fonts/px-icon.ttf?ormo7k') format('truetype'),
+		url('fonts/px-icon.svg?ormo7k#px-icon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="px-icon-"], [class*=" px-icon-"] {
+	font-family: 'px-icon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.px-icon-twitter:before {
+	content: "\e600";
+}
+.px-icon-arrow:before {
+	content: "\e601";
+}
+.px-icon-bar-chart:before {
+	content: "\e602";
+}
+.px-icon-binoculars:before {
+	content: "\e603";
+}
+.px-icon-book:before {
+	content: "\e604";
+}
+.px-icon-checkbox:before {
+	content: "\e605";
+}
+.px-icon-currency:before {
+	content: "\e606";
+}
+.px-icon-cursor-touch:before {
+	content: "\e607";
+}
+.px-icon-database:before {
+	content: "\e608";
+}
+.px-icon-facebook:before {
+	content: "\e609";
+}
+.px-icon-id-card:before {
+	content: "\e60a";
+}
+.px-icon-laptop:before {
+	content: "\e60b";
+}
+.px-icon-light-bulb:before {
+	content: "\e60c";
+}
+.px-icon-link:before {
+	content: "\e60d";
+}
+.px-icon-linkedin:before {
+	content: "\e60e";
+}
+.px-icon-magnifier:before {
+	content: "\e60f";
+}
+.px-icon-shopping-bag:before {
+	content: "\e610";
+}
+.px-icon-shopping-cart:before {
+	content: "\e611";
+}
+.px-icon-speech-bubble:before {
+	content: "\e612";
+}
+.px-icon-time:before {
+	content: "\e613";
+}
+.px-icon-twitter-circle:before {
+	content: "\e614";
+}
+.px-icon-video-play:before {
+	content: "\e615";
+}

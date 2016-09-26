@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+
+    <link rel="stylesheet" href="styles/css/style.css" type="text/css">
+    <link rel="stylesheet" href="components/rating/rating.css" type="text/css">
+ 
+    <!-- endbuild -->
+  </head>
+  <body ng-app="clientApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <div id = "notConnected">
+                <a ui-sref="login">Connexion</a><br/>
+                <a ui-sref="signin">S'inscrire</a><br/>
+            </div>
+
+             <!--  <a ui-sref="users.new">Créer un user</a> -->
+         
+        </div>
+      </div>
+    </div>
+    <div class = "main">
+      <ui-view></ui-view>
+      <p style = "color: darkgray"> Developped by Mamadou KANOUTE</p>
+    </div>
+
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/a0-angular-storage/dist/angular-storage.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/resolver.js"></script>
+        <script src="scripts/resources.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="components/constants.js"></script>
+        <script src="components/token_client.js"></script>
+        <script src="components/auth/auth.js"></script>
+        <script src="components/rating/rating.js"></script>
+        <script src="components/upload/upload.js"></script>
+        <script src="partials/auth/login_ctrl.js"></script>
+        <script src="partials/auth/signin.js"></script>
+        <script src="partials/profile/profile_home_ctrl.js"></script>
+        <script src="partials/profile/profile_ctrl.js"></script>
+        <script src="partials/product/product_ctrl.js"></script>
+        <script src="partials/product/product_search_ctrl.js"></script>
+        <script src="partials/basket/basket_ctrl.js"></script>
+        <script src="partials/product/product_new_ctrl.js"></script>
+        <script src="partials/product/product_list_ctrl.js"></script>
+        <script src="partials/product/product_info_ctrl.js"></script>
+        <script src="partials/order/order_list_ctrl.js"></script>
+        <script src="partials/order/order_ctrl.js"></script>
+<!--         <script src="partials/users/users_list_ctrl.js"></script>
+        <script src="partials/users/users_new_ctrl.js"></script> -->
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

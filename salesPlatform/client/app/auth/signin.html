@@ -1,0 +1,28 @@
+<div>
+ <!-- <div class="modal fade" data-toggle="modal" data-backdrop="true" id="myModal"> -->
+    <div ng-switch="ui.screen">
+    <!-- LOGIN INPUT -->
+            <div class="modal-header">
+                <button type="button" class="close fui-cross" ng-click ="hideModal()" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="px-head-line" translate>Log In</h4>
+            </div>
+            <div class="modal-body" stop-event="touchend">
+                <span class="login-error px-error-message" ng-if="ui.loginError">{{ui.loginError}}</span>
+                <form novalidate name="loginForm" style="margin-bottom: 5px" class="px-form">
+                    <div class="form-group">
+                        <label class="px-form-label">{{ 'Username or Email' | translate }}</label>
+                        <input px-set-focus type="text" class="px-form-input form-control input-block-level flat" ng-model="ui.username" name="uUsername" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="px-form-label">{{ 'Password' | translate }}</label>
+                        <input type="password" class="px-form-input form-control input-block-level flat" ng-model="ui.password" name="uPassword" required>
+                    </div>
+
+
+                    <button type="submit"
+                    class="btn btn-px-basic btn-block"
+                    ng-click="loginSubmit()"
+                    ng-disabled="loginForm.$invalid" translate>Log In</button>
+                </form>
+
+</div>

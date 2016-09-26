@@ -1,0 +1,24 @@
+<div>
+	<form>
+		<label>Name</label>
+		<input type = "text" ng-model = "product.name"><br/>
+		<label>Description</label>
+		<textarea ng-model = "product.description"></textarea><br/>
+		<label>Qte</label> 
+		<input type = "number" ng-model = "product.qte"><br/>
+		<label>Prix</label>
+		<input type = "text" ng-model = "product.price"><br/>
+		<label>Categorie</label>
+        <select ng-model="product.typeid" ng-options="key as value for (key , value) in tab" >
+        </select><br/>
+        <label>Choisir une image, avec un autre type votre requete ne sera pas envoyée</label>
+		<input type = "file" id = "fichier"  name = "fichier" /><br/>
+		<input type = "submit" ng-click = "saveProduct()">
+	</form>
+<!-- 	<form>
+		<label>Modifier l'image</label>
+		<input type = "file" id = "fichier" name = "fichier" ng-show = "show" />
+		<input type = "submit" ng-click = "saveProduct()">
+	</form> -->
+<div id="prev"></div>
+</div>

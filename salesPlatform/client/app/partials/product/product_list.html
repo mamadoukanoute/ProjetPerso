@@ -1,0 +1,41 @@
+<section class="team">
+    <header>
+        <h2>Liste des produits</h2>
+    </header>
+    <div>
+    <form class = "searchForm">
+    <label>Tapez le nom du produit à chercher</label>
+    	<input type = "search" ng-model = "lookedProduct" ng-change = "lookedProductChange()">
+    	<input type = "submit" value = "Chercher" ng-click = "search()">
+    </form>
+    Trier Par : 
+        <select ng-model="order" ng-change = "orderBy()" ng-options="key as value for (key , value) in tab" >
+        </select>
+    </div><br/><br/><br/>
+    <div class="row" >
+        <div class="col sm-w2 xs-w6" ng-repeat = "product in products">
+	        <div class="box card">
+		        <div class="avatar">
+					<img ng-src = "http://localhost:8000/uploads/{{product.name_file}}">
+				</div>
+				<div class="member">
+					<a ui-sref = "profile.product.info({prodid: product.id})"><strong class = "name">{{product.name}}</strong></a><br/>
+					<!--<em class = "role">Description : {{product.description}}</em><br/>-->
+					<em class = "role">{{product.price}}€</em>
+					<ul class="sm">
+                    </ul>
+				</div>
+			</div>
+			<div ng-if = "current_user.roles[0] === 'client' ">
+				<p>Note : {{rating}}</p>
+				<rating rating-max-value = "10" ng-change = "updateRating(product)" ng-model = "product.rating"></rating>
+			   	<a href = "" ng-click = "addToBasket(product)" >Ajouter au panier</a>
+			 </div>
+			<div ng-if = "current_user.roles[0] === 'vendeur' ">
+			   	<a ui-sref = "profile.product.edit({id:product.id})">Modifier</a>
+			   	<a href = "" ng-click = "deleteProduct(product.id)">Supprimer</a>
+			 </div>
+		</div>
+	</div>
+
+	</section>
